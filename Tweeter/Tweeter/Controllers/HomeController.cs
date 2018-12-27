@@ -22,9 +22,11 @@ namespace Tweeter.Controllers
             Person person = db.People.Find(User.Identity.Name);
             return View(person);
         }
-
-
-
+        /// <summary>
+        /// Edited this for changes validation
+        /// </summary>
+        /// <param name="PersionUserId"></param>
+        /// <returns></returns>
         [Authorize]
         [OutputCache(Duration = 0, NoStore = true)]
         public JsonResult SearchPerson(string PersionUserId)
